@@ -14,10 +14,11 @@ We built it for Dual Input, a shared cockpit for MSFS 2024, and publish it as it
 ## Install
 
 ```bash
-npm install --save-dev --save-exact github:dual-input/coherent-checks#v0.1.0
+npm install --save-dev github:dual-input/coherent-checks
 ```
 
-npm builds the package as it installs it, so the first install of each tag takes a little longer.
+npm's lockfile pins the commit it installed, and `npm update coherent-checks` takes the newest on `main`.
+npm builds the package as it installs it, so the first install of each commit takes a little longer.
 It needs Node 22.18 or later.
 
 ## Use
@@ -98,7 +99,7 @@ A sim update can change any of this.
 4. Run `npm run css-data`, which reads the newest of each.
 5. Run `npm test`.
    A failure names each item where the check and the engine now disagree.
-6. Commit, and tag a new version.
+6. Commit and push, then run `npm update coherent-checks` where it's installed.
 
 ## Known gaps
 
