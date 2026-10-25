@@ -95,7 +95,8 @@ export function readP14(simFile = newest("p14-coherent-css-full-2026"), chromium
     add({ group: "media", name: m.query, css: `@media ${m.query} { .x { z-index: 1 } }` }, (r) => (r === chromium ? parsed(r.media[i].parsed) : sameQuery(r.media[i].parsed, m.query)))
   })
 
-  const names = (r: Result) => new Set([...r.engine.computed, ...r.engine.styleKeys].filter((n: string) => !n.startsWith("--")))
+  // The style object's keys include cssText and cssFloat, which p14 wrote as css-text and css-float, and which are no properties.
+  const names = (r: Result) => new Set([...r.engine.computed, ...r.engine.styleKeys].filter((n: string) => !n.startsWith("--") && n !== "css-text" && n !== "css-float"))
   const each = sim.map(names)
   const own = new Set([...each[0]!].filter((n) => each.every((s) => s.has(n))))
   return { file: path.basename(simFile), mdnData: json.mdn, documents: json.runs.map((r: Result) => r.label), userAgent: sim[0]!.ua, own, items }

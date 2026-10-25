@@ -48,11 +48,15 @@ const fn = (name: string) => functions.get(name) ?? functions.set(name, new Tall
 const keyword = (property: string, name: string) => (keywords.get(property) ?? keywords.set(property, new Set()).get(property)!).add(name.toLowerCase())
 const value = (text: string) => csstree.parse(text.replace(/\s*!important\s*$/, ""), { context: "value" })
 
-for (const item of byGroup("property")) properties.add(item.name, item)
-for (const item of byGroup("webkit")) if (item.kept) properties.kept.add(item.name)
+// `inherit` is a value of every property, so Chromium dropping one says only that Chromium
+// lacks it, and a property Coherent GT dropped is dropped whatever Chromium did. p14 tried a
+// -webkit- form only where the engine dropped the plain property, and Chromium, which kept
+// most of those, never tried it.
+const propertyItems = [...byGroup("property"), ...byGroup("webkit")]
+for (const item of propertyItems) (item.kept ? properties.kept : properties.dropped).add(item.name)
 // The engine's own names, such as -webkit-font-smoothing, which mdn-data doesn't list, are in
 // its style object, but a property p14 tried and saw dropped stays dropped.
-const tried = new Set(byGroup("property").map((i) => i.name))
+const tried = new Set(propertyItems.map((i) => i.name))
 for (const name of p14.own) if (!tried.has(name) || properties.kept.has(name)) properties.kept.add(name)
 
 for (const item of byGroup("keyword")) {
@@ -69,7 +73,7 @@ for (const item of byGroup("function")) {
     for (const f of found.functions) fn(f.name).kept.add(item.property!)
     tally(found.parts, item)
   } else if (item.chromium) {
-    const tested = found.functions.find((f) => f.name.replace(/^-(webkit|moz)-/, "") === item.name.slice(0, -2))
+    const tested = found.functions.find((f) => f.name.replace(/^-(webkit|moz)-/, "") === item.name.slice(0, -2).toLowerCase())
     if (tested) fn(tested.name).dropped.add(item.property!)
   }
 }

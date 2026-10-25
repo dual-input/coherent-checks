@@ -6,6 +6,7 @@ import { checkCss } from "../src/index.ts"
 
 const messages = (css: string) => checkCss(css).map((f) => f.message)
 const fails = (css: string) => checkCss(css).length > 0
+const UNTESTED_TEXT = "is untested in Coherent GT, so count on it nowhere until a probe measures it"
 
 // What the engine keeps and then ignores, which the check fails though p14 saw it kept
 // (data/css-rules.json, "ignored"), and `column-gap: normal`, which spaces nothing anywhere
@@ -229,7 +230,27 @@ test("a selector Coherent GT can't read fails its whole rule, read one by one wh
     'the check can\'t read the selector ".b || .c", so it fails until a probe measures it, in .a, .b || .c',
   ])
   assert.deepEqual(messages(".a:before, .b::after, .c:nth-child(2 of .d) { content: '' }"), [])
-  assert.deepEqual(messages(".a:-moz-focusring { color: red }")[0], ":-moz-focusring is untested in Coherent GT, so count on it nowhere until a probe measures it, which drops the whole rule, in .a:-moz-focusring")
+  assert.deepEqual(messages(".a:-moz-focusring { color: red }"), [":-moz-focusring is untested in Coherent GT, and a selector the engine can't read drops its whole rule, in .a:-moz-focusring"])
+  // A selector read alone keeps its place in the file.
+  const f = checkCss(".a { color: red }\n.b, .c:focus-visible, .d || .e { color: red }").find((f) => f.message.startsWith(":focus-visible"))
+  assert.deepEqual([f!.line, f!.column], [2, 7])
+  assert.deepEqual(messages(".x { .y { z-index: 1 } }"), ["a rule nested in another is dropped by Coherent GT, in .x"])
+})
+
+test("a drop p14 measured says dropped, though Chromium never tried it", () => {
+  assert.deepEqual(messages(".a { -webkit-backdrop-filter: blur(4px) }"), ["-webkit-backdrop-filter is dropped by Coherent GT, in .a"])
+})
+
+test("rgb() with an alpha and rgba() without one fail untested, but not where a var() holds several values", () => {
+  assert.deepEqual(messages(".a { color: rgb(0, 0, 0, 0.5) }"), [`rgb() with an alpha ${UNTESTED_TEXT}, in .a`])
+  assert.deepEqual(messages(".a { color: rgba(0, 0, 0) }"), [`rgba() without an alpha ${UNTESTED_TEXT}, in .a`])
+  assert.deepEqual(messages(".a { color: rgba(var(--rgb), 0.5); background: rgb(var(--rgb)) }"), [])
+})
+
+test("a media condition css-tree can't read fails untested", () => {
+  assert.deepEqual(messages("@media (width = 600px) { .a { color: red } }"), [
+    "a condition the check can't read in a media query is untested in Coherent GT, and a query the engine can't read applies no rule under it",
+  ])
 })
 
 test("a function passes in a property p14 never tried it in where p14 kept it elsewhere, and fails where p14 saw it dropped", () => {

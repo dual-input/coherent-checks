@@ -64,10 +64,10 @@ Object rest fails too, though the engine runs it, since the check parses at ES20
 
 | Part | Passes when |
 | --- | --- |
-| A property | the engine kept it, or kept its `-webkit-` form, or lists it as its own, such as `-webkit-font-smoothing`; a custom property always does |
+| A property | the engine kept it, it's a `-webkit-` form the engine kept, or the engine lists it as its own, such as `-webkit-font-smoothing`; a custom property always does |
 | A keyword | anything but a keyword the engine dropped where Chromium kept it, such as `display: flow-root` |
 | A function | the engine kept it in this property, or, in a property the probe never tried it in, kept it anywhere, so `circle()` passes in `-webkit-clip-path` and fails in `clip-path` |
-| `rgb()`, `rgba()`, `hsl()`, `hsla()` | written with commas, with no `/`, no alpha as a percent, and no unit on the hue |
+| `rgb()`, `rgba()`, `hsl()`, `hsla()` | written with commas, with no `/`, no alpha as a percent, and no unit on the hue, `rgb()` and `hsl()` with three values and `rgba()` and `hsla()` with four, unless a `var()` holds some of them |
 | A unit, a selector's part, an at-rule, a media feature | the engine kept it, and every selector or query inside one passes too |
 
 It also fails what the engine parses and then ignores: `column-gap`, `justify-content: end`, `display: contents`, and the media queries `(hover: hover)` and `(pointer: fine)` and their `any-` forms, which never match in the sim, though `:hover` works.
@@ -84,9 +84,10 @@ Dual Input's probes ran in MSFS 2024 through the sim's inspector:
 - **p13**, on MSFS 2024, Steam build 26058316, on 2026-10-25, ran 129 tests in mainUi, the EFB's document, and the toolbar's, laying out elements under rules of its own and reading back their computed style.
 - **p14**, on the same build and day, in the same three documents, tried every property with up to 40 of the keywords its syntax names, and every function, unit, selector, and at-rule that MDN's mdn-data 2.37.2 lists, with media features listed by hand, and ran the same tests in Chromium 152.
 
-Every p13 and p14 item gave the same answer in all three documents.
+Every item of p14's catalog gave the same answer in all three documents.
 `data/css.json` is p14's answers, which `npm run css-data` writes from p14's results in `measurements/`, and which nobody edits by hand.
 `data/css-rules.json` holds what those answers can't say, each entry with how we know: what p13 measured that p14 didn't try, and what the engine parses and then ignores.
+So read the lists through `checkCss`, since `data/css.json` alone passes what `data/css-rules.json` fails, such as `column-gap`.
 The tests check the CSS check against every p14 item either engine kept and every p13 case, and the JavaScript check against p09's samples.
 
 ## After a sim update
@@ -96,6 +97,7 @@ A sim update can change any of this.
 1. In Dual Input, run p09 with the sim in a flight, and p14 with the sim at the main menu, after its `--baseline` run in current Chromium.
 2. Change `data/js.json` to what p09 found.
 3. Copy p14's two results files into `measurements/`.
+   If p14's at-rules changed, copy the texts of its `AT_RULES` into `measurements/p14-at-rules.json`, since p14's results name each at-rule but don't hold its text.
 4. Run `npm run css-data`, which reads the newest of each.
 5. Run `npm test`.
    A failure names each item where the check and the engine now disagree.
@@ -106,7 +108,11 @@ A sim update can change any of this.
 - A regex built from a pattern computed at run time escapes the JavaScript check, since a parse can't see it.
 - CSS written in markup, such as a `style` attribute or a `<style>` element in an HTML file, isn't checked; only `.css` files are.
 - A keyword p14 never tried passes, since p14 tried at most 40 per property and none for the engine's own properties, such as `-webkit-box-orient`.
-- Kept means the engine holds a declaration, and lays out boxes where Chromium does where p13 or p14 measured a layout; neither probe looked at the paint, which only a screenshot shows.
+- p14 tried each keyword as a property's whole value, so a value of two, such as `display: inline flex`, passes on each keyword alone.
+- A custom property holding a color's channels passes whatever their form, so `--c: 79 211 234` read as `rgba(var(--c), 0.8)` passes and draws nothing; write the channels with commas, `--c: 79, 211, 234`.
+- Kept means the engine holds a declaration.
+  Where p13 or p14 laid one out, the engine placed boxes where Chromium did, but for a table cell given a width, which took the table's whole width, and which the check passes.
+  Neither probe looked at the paint, which only a screenshot shows.
 - No probe has measured the CSS of an in-game panel's document.
 
 ## Develop

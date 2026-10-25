@@ -21,6 +21,9 @@ export type ValueParts = {
 /** The name of a rule nested in another, which data/css.json lists among the at-rules. */
 export const NESTING = "nesting"
 
+/** The name of a media condition css-tree can't read, such as `(width = 600px)`, which no probe has tried. */
+export const UNREADABLE_CONDITION = "a condition the check can't read"
+
 const COLOR_FUNCTIONS = new Set(["rgb", "rgba", "hsl", "hsla"])
 const HEX: Record<number, string> = { 3: "#rgb", 4: "#rgba", 6: "#rrggbb", 8: "#rrggbbaa" }
 
@@ -53,7 +56,11 @@ export function valueParts(value: csstree.CssNode): ValueParts {
   return out
 }
 
-/** The form of an `rgb()`, `rgba()`, `hsl()`, or `hsla()`, which Coherent GT reads only with commas. */
+/**
+ * The form of an `rgb()`, `rgba()`, `hsl()`, or `hsla()`. Coherent GT keeps them with commas,
+ * and no probe has tried `rgb()` with an alpha or `rgba()` without one, which only CSS Color 4
+ * made the same function, so those are forms of their own.
+ */
 function colorForm(fn: csstree.FunctionNode): string {
   const args = fn.children.toArray()
   const first = args[0]
@@ -66,7 +73,13 @@ function colorForm(fn: csstree.FunctionNode): string {
   }
   if (groups.length === 1 && groups[0]!.length > 1) return "with spaces"
   if (groups[3]?.some((a) => a.type === "Percentage")) return "with an alpha as a percent"
-  if (fn.name.toLowerCase().startsWith("hsl") && groups[0]?.some((a) => a.type === "Dimension")) return "with a hue unit"
+  const name = fn.name.toLowerCase()
+  if (name.startsWith("hsl") && groups[0]?.some((a) => a.type === "Dimension")) return "with a hue unit"
+  // A var() can hold several values, as `rgba(var(--rgb), 0.5)` holds three, so the count says nothing then.
+  if (!args.some((a) => a.type === "Function" && a.name.toLowerCase() === "var")) {
+    if (!name.endsWith("a") && groups.length === 4) return "with an alpha"
+    if (name.endsWith("a") && groups.length === 3) return "without an alpha"
+  }
   return "with commas"
 }
 
@@ -137,6 +150,9 @@ export function mediaParts(query: csstree.MediaQuery): Part[] {
         add(word === "not" ? "not inside a condition" : word, child)
       } else if (child.type === "Condition") {
         condition(child)
+      } else {
+        // css-tree reads `(width = 600px)` as a GeneralEnclosed, since it doesn't take `=` in a range.
+        add(UNREADABLE_CONDITION, child)
       }
     }
   }

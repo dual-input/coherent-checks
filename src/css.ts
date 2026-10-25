@@ -104,6 +104,8 @@ class Check {
       if (node.type === "Rule") this.rule(node, where)
       else if (node.type === "Atrule") this.atRule(node, where)
       else if (node.type === "Declaration") declarations.push(node)
+      // css-tree gives a rule nested without `&`, `.x { .y { } }`, as raw text inside the outer rule.
+      else if (node.type === "Raw" && where.inRule && node.value.includes("{")) this.part({ kind: "atRules", name: NESTING, node }, where)
       else if (node.type === "Raw" && node.value.trim()) this.flag(node, `the check can't read ${quote(node.value)}, so it fails until a probe measures it`, where)
     }
     this.declarations(declarations, where)
@@ -125,7 +127,7 @@ class Check {
   private selectors(prelude: csstree.SelectorList | csstree.Raw, where: Where): boolean {
     let ok = true
     // css-tree gives a list it can't read whole as raw text, so each selector of it is read alone.
-    const list = prelude.type === "SelectorList" ? prelude.children.toArray() : splitList(prelude.value).map((text) => parseSelector(text) ?? text)
+    const list = prelude.type === "SelectorList" ? prelude.children.toArray() : splitList(prelude.value).map((piece) => parseSelector(piece, prelude) ?? piece.text)
     for (const selector of list) {
       if (typeof selector === "string") {
         this.flag(prelude, `the check can't read the selector ${quote(selector)}, so it fails until a probe measures it`, where)
@@ -238,16 +240,23 @@ class Check {
   private part(part: Part, where: Where): boolean {
     const verdict = partVerdict(part)
     if (verdict === "kept") return true
-    const what = verdict === "dropped" ? "is dropped by Coherent GT" : UNTESTED
-    const then =
+    // What the engine does with a rule holding the part, which a dropped part's message states,
+    // and an untested one's states as what would follow if the engine can't read it.
+    const [dropped, untested] =
       part.kind === "selectors"
-        ? ", which drops the whole rule"
+        ? ["which drops the whole rule", "a selector the engine can't read drops its whole rule"]
         : part.kind === "media"
-          ? ", so no rule under this query applies"
+          ? ["so no rule under this query applies", "a query the engine can't read applies no rule under it"]
           : part.kind === "atRules" && part.name !== NESTING
-            ? ", with every rule inside it"
-            : ""
-    this.flag(part.node, `${describe(part)} ${what}${then}`, where)
+            ? ["with every rule inside it", "an at-rule the engine can't read drops every rule inside it"]
+            : [undefined, undefined]
+    const message =
+      verdict === "dropped"
+        ? `${describe(part)} is dropped by Coherent GT${dropped ? `, ${dropped}` : ""}`
+        : untested
+          ? `${describe(part)} is untested in Coherent GT, and ${untested}`
+          : `${describe(part)} ${UNTESTED}`
+    this.flag(part.node, message, where)
     return false
   }
 
@@ -309,31 +318,46 @@ function matches(rule: Rule, property: string, parts: ReturnType<typeof valuePar
   return true
 }
 
-/** One selector of a list, or undefined where css-tree can't read it, as with the column combinator `||`. */
-function parseSelector(text: string): csstree.CssNode | undefined {
+/** A selector of a list css-tree couldn't read whole: its text, and where it starts in the list. */
+type Piece = { text: string; start: number }
+
+/**
+ * One selector of a raw list, placed where the file has it, or undefined where css-tree can't
+ * read it, as with the column combinator `||`.
+ */
+function parseSelector(piece: Piece, list: csstree.Raw): csstree.CssNode | undefined {
+  const at = list.loc?.start ?? { offset: 0, line: 1, column: 1 }
+  const before = list.value.slice(0, piece.start).split("\n")
+  const line = at.line + before.length - 1
+  const column = before.length > 1 ? before[before.length - 1]!.length + 1 : at.column + piece.start
   try {
-    return csstree.parse(text, { context: "selector", positions: true })
+    return csstree.parse(piece.text, { context: "selector", positions: true, offset: at.offset + piece.start, line, column })
   } catch {
     return undefined
   }
 }
 
 /** A selector list's selectors, split at the commas outside parentheses and brackets. */
-function splitList(text: string): string[] {
-  const out: string[] = []
+function splitList(text: string): Piece[] {
+  const out: Piece[] = []
   let depth = 0
   let start = 0
+  const push = (end: number) => {
+    const raw = text.slice(start, end)
+    const lead = raw.length - raw.trimStart().length
+    if (raw.trim()) out.push({ text: raw.trim(), start: start + lead })
+  }
   for (let i = 0; i < text.length; i++) {
     const c = text[i]
     if (c === "(" || c === "[") depth++
     else if (c === ")" || c === "]") depth--
     else if (c === "," && depth === 0) {
-      out.push(text.slice(start, i).trim())
+      push(i)
       start = i + 1
     }
   }
-  out.push(text.slice(start).trim())
-  return out.filter(Boolean)
+  push(text.length)
+  return out
 }
 
 const normalize = (text: string) => text.toLowerCase().replace(/\s+/g, "")
