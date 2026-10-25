@@ -1,0 +1,59 @@
+{
+  "kept": [
+    {
+      "selector": "::-webkit-scrollbar",
+      "because": "p13 kept a rule whose list held .a::-webkit-scrollbar in mainUi, the EFB's document, and the toolbar's, and p14 didn't try it (measured on MSFS 2024, 2026-10-25, Dual Input, record/areas/architecture/log.md, \"2026-10-25: Coherent GT drops `@layer`, oklch, `color-mix()`, and every `gap` but `grid-gap`, so Tailwind 4's output can't style a page there\")"
+    },
+    {
+      "atRule": "@charset",
+      "because": "@charset names a file's encoding and becomes no rule in any engine's CSSOM, so p14 saw neither engine keep it, and the check passes it unmeasured"
+    }
+  ],
+  "dropped": [
+    {
+      "property": "opacity",
+      "unit": "%",
+      "message": "opacity as a percent is dropped by Coherent GT, which reads a number such as 0.5",
+      "because": "p13 read opacity: 50% back as 1 in mainUi, the EFB's document, and the toolbar's (measured on MSFS 2024, 2026-10-25, Dual Input, record/areas/architecture/log.md, \"2026-10-25: Coherent GT drops `@layer`, oklch, `color-mix()`, and every `gap` but `grid-gap`, so Tailwind 4's output can't style a page there\")"
+    }
+  ],
+  "ignored": [
+    {
+      "property": "column-gap",
+      "message": "column-gap parses in Coherent GT and then spaces nothing, in a grid or a flex row, where grid-column-gap spaces a grid",
+      "because": "p13 laid out column-gap in a grid and in a flex row and found no space, while CSS.supports said yes, and grid-column-gap spaced the grid (measured on MSFS 2024, 2026-10-25, Dual Input, record/areas/architecture/log.md, \"2026-10-25: Coherent GT drops `@layer`, oklch, `color-mix()`, and every `gap` but `grid-gap`, so Tailwind 4's output can't style a page there\")"
+    },
+    {
+      "property": "justify-content",
+      "value": "end",
+      "message": "justify-content: end parses in Coherent GT and then packs at the start, where flex-end packs at the end",
+      "because": "p14's layout case put a flex row's first box at 0px where Chromium put it at 80px (measured on MSFS 2024, 2026-10-25, Dual Input, record/areas/architecture/log.md, \"2026-10-25: Coherent GT keeps 304 of the 554 CSS properties Chromium 152 keeps, and lays out flexbox and grid as Chromium does but for `gap`, `justify-content: end`, and subgrid\")"
+    },
+    {
+      "property": "display",
+      "value": "contents",
+      "message": "display: contents parses in Coherent GT and then computes as inline",
+      "because": "p13 read display: contents back as inline in mainUi, the EFB's document, and the toolbar's (measured on MSFS 2024, 2026-10-25, Dual Input, record/areas/architecture/log.md, \"2026-10-25: Coherent GT drops `@layer`, oklch, `color-mix()`, and every `gap` but `grid-gap`, so Tailwind 4's output can't style a page there\")"
+    },
+    {
+      "media": "(hover: hover)",
+      "message": "(hover: hover) parses in Coherent GT and never matches, so no rule under it applies, though :hover works",
+      "because": "p14's query matched in Chromium and in no document of the sim, where (hover: none) matched (measured on MSFS 2024, 2026-10-25, Dual Input, record/areas/architecture/log.md, \"2026-10-25: Coherent GT keeps 304 of the 554 CSS properties Chromium 152 keeps, and lays out flexbox and grid as Chromium does but for `gap`, `justify-content: end`, and subgrid\")"
+    },
+    {
+      "media": "(any-hover: hover)",
+      "message": "(any-hover: hover) parses in Coherent GT and never matches, so no rule under it applies, though :hover works",
+      "because": "p14's query matched in Chromium and in no document of the sim (measured on MSFS 2024, 2026-10-25, Dual Input, record/areas/architecture/log.md, \"2026-10-25: Coherent GT keeps 304 of the 554 CSS properties Chromium 152 keeps, and lays out flexbox and grid as Chromium does but for `gap`, `justify-content: end`, and subgrid\")"
+    },
+    {
+      "media": "(pointer: fine)",
+      "message": "(pointer: fine) parses in Coherent GT and never matches, so no rule under it applies",
+      "because": "p14's query matched in Chromium and in no document of the sim (measured on MSFS 2024, 2026-10-25, Dual Input, record/areas/architecture/log.md, \"2026-10-25: Coherent GT keeps 304 of the 554 CSS properties Chromium 152 keeps, and lays out flexbox and grid as Chromium does but for `gap`, `justify-content: end`, and subgrid\")"
+    },
+    {
+      "media": "(any-pointer: fine)",
+      "message": "(any-pointer: fine) parses in Coherent GT and never matches, so no rule under it applies",
+      "because": "p14's query matched in Chromium and in no document of the sim (measured on MSFS 2024, 2026-10-25, Dual Input, record/areas/architecture/log.md, \"2026-10-25: Coherent GT keeps 304 of the 554 CSS properties Chromium 152 keeps, and lays out flexbox and grid as Chromium does but for `gap`, `justify-content: end`, and subgrid\")"
+    }
+  ]
+}

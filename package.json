@@ -1,0 +1,44 @@
+{
+  "name": "coherent-checks",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Checks JavaScript and CSS against what MSFS 2024's Coherent GT was measured running and keeping",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "bin": {
+    "coherent-check": "./dist/main.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./data/*": "./data/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "data"
+  ],
+  "scripts": {
+    "prepare": "tsc -p tsconfig.build.json",
+    "test": "tsc -p . && node --test test/*.test.ts",
+    "css-data": "node scripts/css-data.ts"
+  },
+  "dependencies": {
+    "@eslint-community/regexpp": "4.12.2",
+    "acorn": "8.19.0",
+    "acorn-walk": "8.3.5",
+    "css-tree": "3.2.1",
+    "eslint-scope": "9.1.2",
+    "source-map-js": "1.2.2"
+  },
+  "devDependencies": {
+    "@types/css-tree": "3.2.0",
+    "@types/node": "22.20.5",
+    "esbuild": "0.28.2",
+    "typescript": "7.0.2"
+  }
+}

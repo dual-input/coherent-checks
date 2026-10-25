@@ -1,0 +1,1796 @@
+{
+  "measured": {
+    "probe": "p14",
+    "file": "p14-coherent-css-full-2026-10-25-09-20-25.json",
+    "mdnData": "2.37.2",
+    "documents": [
+      "mainUi",
+      "EFB",
+      "toolbar"
+    ],
+    "userAgent": "Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/604.1.38 (KHTML, like Gecko) Chrome/49.0.2623 Safari/604.1.38 CoherentGT/2.0"
+  },
+  "properties": {
+    "kept": [
+      "-coherent-custom-effect",
+      "-coherent-custom-effect-param1",
+      "-coherent-custom-effect-param2",
+      "-coherent-custom-effect-param3",
+      "-coherent-custom-effect-param4",
+      "-coherent-custom-effect-param5",
+      "-coherent-custom-effect-param6",
+      "-coherent-custom-effect-param7",
+      "-coherent-custom-effect-param8",
+      "-coherent-custom-effect-string1",
+      "-coherent-custom-effect-string2",
+      "-coherent-custom-effect-string3",
+      "-coherent-custom-effect-string4",
+      "-coherent-layer-clip-aa",
+      "-webkit-appearance",
+      "-webkit-aspect-ratio",
+      "-webkit-backface-visibility",
+      "-webkit-background-clip",
+      "-webkit-background-composite",
+      "-webkit-background-origin",
+      "-webkit-background-size",
+      "-webkit-border-after",
+      "-webkit-border-after-color",
+      "-webkit-border-after-style",
+      "-webkit-border-after-width",
+      "-webkit-border-before",
+      "-webkit-border-before-color",
+      "-webkit-border-before-style",
+      "-webkit-border-before-width",
+      "-webkit-border-end",
+      "-webkit-border-end-color",
+      "-webkit-border-end-style",
+      "-webkit-border-end-width",
+      "-webkit-border-fit",
+      "-webkit-border-horizontal-spacing",
+      "-webkit-border-image",
+      "-webkit-border-radius",
+      "-webkit-border-start",
+      "-webkit-border-start-color",
+      "-webkit-border-start-style",
+      "-webkit-border-start-width",
+      "-webkit-border-vertical-spacing",
+      "-webkit-box-align",
+      "-webkit-box-decoration-break",
+      "-webkit-box-direction",
+      "-webkit-box-flex",
+      "-webkit-box-flex-group",
+      "-webkit-box-lines",
+      "-webkit-box-ordinal-group",
+      "-webkit-box-orient",
+      "-webkit-box-pack",
+      "-webkit-box-reflect",
+      "-webkit-box-shadow",
+      "-webkit-clip-path",
+      "-webkit-column-axis",
+      "-webkit-column-break-after",
+      "-webkit-column-break-before",
+      "-webkit-column-break-inside",
+      "-webkit-column-progression",
+      "-webkit-cursor-visibility",
+      "-webkit-flow-from",
+      "-webkit-flow-into",
+      "-webkit-font-kerning",
+      "-webkit-font-size-delta",
+      "-webkit-font-smoothing",
+      "-webkit-hyphenate-character",
+      "-webkit-hyphenate-limit-after",
+      "-webkit-hyphenate-limit-before",
+      "-webkit-hyphenate-limit-lines",
+      "-webkit-hyphens",
+      "-webkit-initial-letter",
+      "-webkit-line-align",
+      "-webkit-line-box-contain",
+      "-webkit-line-clamp",
+      "-webkit-line-grid",
+      "-webkit-line-snap",
+      "-webkit-locale",
+      "-webkit-margin-after-collapse",
+      "-webkit-margin-before-collapse",
+      "-webkit-marquee-direction",
+      "-webkit-marquee-increment",
+      "-webkit-marquee-repetition",
+      "-webkit-marquee-style",
+      "-webkit-mask",
+      "-webkit-mask-box-image",
+      "-webkit-mask-box-image-outset",
+      "-webkit-mask-box-image-repeat",
+      "-webkit-mask-box-image-slice",
+      "-webkit-mask-box-image-source",
+      "-webkit-mask-box-image-width",
+      "-webkit-mask-clip",
+      "-webkit-mask-composite",
+      "-webkit-mask-image",
+      "-webkit-mask-origin",
+      "-webkit-mask-position",
+      "-webkit-mask-position-x",
+      "-webkit-mask-position-y",
+      "-webkit-mask-repeat",
+      "-webkit-mask-repeat-x",
+      "-webkit-mask-repeat-y",
+      "-webkit-mask-size",
+      "-webkit-mask-source-type",
+      "-webkit-nbsp-mode",
+      "-webkit-print-color-adjust",
+      "-webkit-region-break-after",
+      "-webkit-region-break-before",
+      "-webkit-region-break-inside",
+      "-webkit-region-fragment",
+      "-webkit-rtl-ordering",
+      "-webkit-ruby-position",
+      "-webkit-svg-shadow",
+      "-webkit-tap-highlight-color",
+      "-webkit-text-combine",
+      "-webkit-text-decoration-color",
+      "-webkit-text-decoration-line",
+      "-webkit-text-decoration-skip",
+      "-webkit-text-decoration-style",
+      "-webkit-text-decorations-in-effect",
+      "-webkit-text-emphasis-color",
+      "-webkit-text-emphasis-position",
+      "-webkit-text-emphasis-style",
+      "-webkit-text-fill-color",
+      "-webkit-text-orientation",
+      "-webkit-text-security",
+      "-webkit-text-stroke",
+      "-webkit-text-stroke-color",
+      "-webkit-text-stroke-width",
+      "-webkit-text-underline-position",
+      "-webkit-text-zoom",
+      "-webkit-transform-style",
+      "-webkit-user-drag",
+      "-webkit-user-modify",
+      "-webkit-user-select",
+      "align-content",
+      "align-items",
+      "align-self",
+      "alignment-baseline",
+      "all",
+      "alt",
+      "animation",
+      "animation-delay",
+      "animation-direction",
+      "animation-duration",
+      "animation-fill-mode",
+      "animation-iteration-count",
+      "animation-name",
+      "animation-play-state",
+      "animation-timing-function",
+      "background",
+      "background-attachment",
+      "background-blend-mode",
+      "background-clip",
+      "background-color",
+      "background-image",
+      "background-origin",
+      "background-position",
+      "background-position-x",
+      "background-position-y",
+      "background-repeat",
+      "background-repeat-x",
+      "background-repeat-y",
+      "background-size",
+      "baseline-shift",
+      "border",
+      "border-bottom",
+      "border-bottom-color",
+      "border-bottom-left-radius",
+      "border-bottom-right-radius",
+      "border-bottom-style",
+      "border-bottom-width",
+      "border-collapse",
+      "border-color",
+      "border-image",
+      "border-image-outset",
+      "border-image-repeat",
+      "border-image-slice",
+      "border-image-source",
+      "border-image-width",
+      "border-left",
+      "border-left-color",
+      "border-left-style",
+      "border-left-width",
+      "border-radius",
+      "border-right",
+      "border-right-color",
+      "border-right-style",
+      "border-right-width",
+      "border-spacing",
+      "border-style",
+      "border-top",
+      "border-top-color",
+      "border-top-left-radius",
+      "border-top-right-radius",
+      "border-top-style",
+      "border-top-width",
+      "border-width",
+      "bottom",
+      "box-shadow",
+      "box-sizing",
+      "break-after",
+      "break-before",
+      "break-inside",
+      "buffered-rendering",
+      "caption-side",
+      "clear",
+      "clip",
+      "clip-path",
+      "clip-rule",
+      "color",
+      "color-interpolation",
+      "color-interpolation-filters",
+      "color-profile",
+      "color-rendering",
+      "column-count",
+      "column-fill",
+      "column-gap",
+      "column-rule",
+      "column-rule-color",
+      "column-rule-style",
+      "column-rule-width",
+      "column-span",
+      "column-width",
+      "columns",
+      "content",
+      "counter-increment",
+      "counter-reset",
+      "css-text",
+      "cursor",
+      "cx",
+      "cy",
+      "direction",
+      "display",
+      "dominant-baseline",
+      "empty-cells",
+      "enable-background",
+      "fill",
+      "fill-opacity",
+      "fill-rule",
+      "filter",
+      "flex",
+      "flex-basis",
+      "flex-direction",
+      "flex-flow",
+      "flex-grow",
+      "flex-shrink",
+      "flex-wrap",
+      "float",
+      "flood-color",
+      "flood-opacity",
+      "font",
+      "font-family",
+      "font-feature-settings",
+      "font-kerning",
+      "font-size",
+      "font-stretch",
+      "font-style",
+      "font-synthesis",
+      "font-variant",
+      "font-variant-alternates",
+      "font-variant-caps",
+      "font-variant-east-asian",
+      "font-variant-ligatures",
+      "font-variant-numeric",
+      "font-variant-position",
+      "font-weight",
+      "glyph-orientation-horizontal",
+      "glyph-orientation-vertical",
+      "grid",
+      "grid-area",
+      "grid-auto-columns",
+      "grid-auto-flow",
+      "grid-auto-rows",
+      "grid-column",
+      "grid-column-end",
+      "grid-column-gap",
+      "grid-column-start",
+      "grid-gap",
+      "grid-row",
+      "grid-row-end",
+      "grid-row-gap",
+      "grid-row-start",
+      "grid-template",
+      "grid-template-areas",
+      "grid-template-columns",
+      "grid-template-rows",
+      "hanging-punctuation",
+      "height",
+      "image-rendering",
+      "isolation",
+      "justify-content",
+      "justify-items",
+      "justify-self",
+      "kerning",
+      "left",
+      "letter-spacing",
+      "lighting-color",
+      "line-break",
+      "line-height",
+      "list-style",
+      "list-style-image",
+      "list-style-position",
+      "list-style-type",
+      "margin",
+      "margin-bottom",
+      "margin-left",
+      "margin-right",
+      "margin-top",
+      "marker",
+      "marker-end",
+      "marker-mid",
+      "marker-start",
+      "mask",
+      "mask-type",
+      "max-height",
+      "max-width",
+      "min-height",
+      "min-width",
+      "mix-blend-mode",
+      "object-fit",
+      "object-position",
+      "opacity",
+      "order",
+      "orphans",
+      "outline",
+      "outline-color",
+      "outline-offset",
+      "outline-style",
+      "outline-width",
+      "overflow",
+      "overflow-wrap",
+      "overflow-x",
+      "overflow-y",
+      "padding",
+      "padding-bottom",
+      "padding-left",
+      "padding-right",
+      "padding-top",
+      "page",
+      "page-break-after",
+      "page-break-before",
+      "page-break-inside",
+      "paint-order",
+      "perspective",
+      "perspective-origin",
+      "perspective-origin-x",
+      "perspective-origin-y",
+      "place-content",
+      "place-items",
+      "place-self",
+      "pointer-events",
+      "position",
+      "quotes",
+      "r",
+      "resize",
+      "right",
+      "rx",
+      "ry",
+      "safe-area-inset-bottom",
+      "safe-area-inset-left",
+      "safe-area-inset-right",
+      "safe-area-inset-top",
+      "shape-image-threshold",
+      "shape-margin",
+      "shape-outside",
+      "shape-rendering",
+      "size",
+      "speak",
+      "src",
+      "stop-color",
+      "stop-opacity",
+      "stroke",
+      "stroke-color",
+      "stroke-dasharray",
+      "stroke-dashoffset",
+      "stroke-linecap",
+      "stroke-linejoin",
+      "stroke-miterlimit",
+      "stroke-opacity",
+      "stroke-width",
+      "tab-size",
+      "table-layout",
+      "text-align",
+      "text-anchor",
+      "text-decoration",
+      "text-emphasis",
+      "text-emphasis-color",
+      "text-emphasis-position",
+      "text-emphasis-style",
+      "text-indent",
+      "text-overflow",
+      "text-rendering",
+      "text-shadow",
+      "text-transform",
+      "top",
+      "touch-action",
+      "transform",
+      "transform-box",
+      "transform-origin",
+      "transform-origin-x",
+      "transform-origin-y",
+      "transform-origin-z",
+      "transform-style",
+      "transition",
+      "transition-delay",
+      "transition-duration",
+      "transition-property",
+      "transition-timing-function",
+      "unicode-bidi",
+      "unicode-range",
+      "vector-effect",
+      "vertical-align",
+      "visibility",
+      "white-space",
+      "widows",
+      "width",
+      "will-change",
+      "word-break",
+      "word-spacing",
+      "word-wrap",
+      "writing-mode",
+      "x",
+      "y",
+      "z-index",
+      "zoom"
+    ],
+    "dropped": [
+      "accent-color",
+      "anchor-name",
+      "anchor-scope",
+      "animation-composition",
+      "animation-range",
+      "animation-range-end",
+      "animation-range-start",
+      "animation-timeline",
+      "animation-trigger",
+      "appearance",
+      "aspect-ratio",
+      "backdrop-filter",
+      "backface-visibility",
+      "baseline-source",
+      "block-size",
+      "border-block",
+      "border-block-color",
+      "border-block-end",
+      "border-block-end-color",
+      "border-block-end-style",
+      "border-block-end-width",
+      "border-block-start",
+      "border-block-start-color",
+      "border-block-start-style",
+      "border-block-start-width",
+      "border-block-style",
+      "border-block-width",
+      "border-end-end-radius",
+      "border-end-start-radius",
+      "border-inline",
+      "border-inline-color",
+      "border-inline-end",
+      "border-inline-end-color",
+      "border-inline-end-style",
+      "border-inline-end-width",
+      "border-inline-start",
+      "border-inline-start-color",
+      "border-inline-start-style",
+      "border-inline-start-width",
+      "border-inline-style",
+      "border-inline-width",
+      "border-shape",
+      "border-start-end-radius",
+      "border-start-start-radius",
+      "box-decoration-break",
+      "caret-animation",
+      "caret-color",
+      "caret-shape",
+      "color-scheme",
+      "column-height",
+      "column-wrap",
+      "contain",
+      "contain-intrinsic-block-size",
+      "contain-intrinsic-height",
+      "contain-intrinsic-inline-size",
+      "contain-intrinsic-size",
+      "contain-intrinsic-width",
+      "container",
+      "container-name",
+      "container-type",
+      "content-visibility",
+      "corner-block-end-shape",
+      "corner-block-start-shape",
+      "corner-bottom-left-shape",
+      "corner-bottom-right-shape",
+      "corner-bottom-shape",
+      "corner-end-end-shape",
+      "corner-end-start-shape",
+      "corner-inline-end-shape",
+      "corner-inline-start-shape",
+      "corner-left-shape",
+      "corner-right-shape",
+      "corner-shape",
+      "corner-start-end-shape",
+      "corner-start-start-shape",
+      "corner-top-left-shape",
+      "corner-top-right-shape",
+      "corner-top-shape",
+      "counter-set",
+      "d",
+      "dynamic-range-limit",
+      "field-sizing",
+      "flex-line-count",
+      "font-language-override",
+      "font-optical-sizing",
+      "font-palette",
+      "font-size-adjust",
+      "font-synthesis-small-caps",
+      "font-synthesis-style",
+      "font-synthesis-weight",
+      "font-variant-emoji",
+      "font-variation-settings",
+      "forced-color-adjust",
+      "gap",
+      "hyphenate-character",
+      "hyphenate-limit-chars",
+      "hyphens",
+      "image-orientation",
+      "initial-letter",
+      "inline-size",
+      "inset",
+      "inset-block",
+      "inset-block-end",
+      "inset-block-start",
+      "inset-inline",
+      "inset-inline-end",
+      "inset-inline-start",
+      "interactivity",
+      "interest-delay",
+      "interest-delay-end",
+      "interest-delay-start",
+      "interpolate-size",
+      "margin-block",
+      "margin-block-end",
+      "margin-block-start",
+      "margin-inline",
+      "margin-inline-end",
+      "margin-inline-start",
+      "mask-clip",
+      "mask-composite",
+      "mask-image",
+      "mask-mode",
+      "mask-origin",
+      "mask-position",
+      "mask-repeat",
+      "mask-size",
+      "math-depth",
+      "math-shift",
+      "math-style",
+      "max-block-size",
+      "max-inline-size",
+      "min-block-size",
+      "min-inline-size",
+      "object-view-box",
+      "offset",
+      "offset-anchor",
+      "offset-distance",
+      "offset-path",
+      "offset-position",
+      "offset-rotate",
+      "overflow-anchor",
+      "overflow-block",
+      "overflow-clip-margin",
+      "overflow-inline",
+      "overlay",
+      "overscroll-behavior",
+      "overscroll-behavior-block",
+      "overscroll-behavior-inline",
+      "overscroll-behavior-x",
+      "overscroll-behavior-y",
+      "padding-block",
+      "padding-block-end",
+      "padding-block-start",
+      "padding-inline",
+      "padding-inline-end",
+      "padding-inline-start",
+      "position-anchor",
+      "position-area",
+      "position-try",
+      "position-try-fallbacks",
+      "position-try-order",
+      "position-visibility",
+      "print-color-adjust",
+      "reading-flow",
+      "reading-order",
+      "rotate",
+      "row-gap",
+      "ruby-align",
+      "ruby-overhang",
+      "ruby-position",
+      "scale",
+      "scroll-behavior",
+      "scroll-initial-target",
+      "scroll-margin",
+      "scroll-margin-block",
+      "scroll-margin-block-end",
+      "scroll-margin-block-start",
+      "scroll-margin-bottom",
+      "scroll-margin-inline",
+      "scroll-margin-inline-end",
+      "scroll-margin-inline-start",
+      "scroll-margin-left",
+      "scroll-margin-right",
+      "scroll-margin-top",
+      "scroll-marker-group",
+      "scroll-padding",
+      "scroll-padding-block",
+      "scroll-padding-block-end",
+      "scroll-padding-block-start",
+      "scroll-padding-bottom",
+      "scroll-padding-inline",
+      "scroll-padding-inline-end",
+      "scroll-padding-inline-start",
+      "scroll-padding-left",
+      "scroll-padding-right",
+      "scroll-padding-top",
+      "scroll-snap-align",
+      "scroll-snap-stop",
+      "scroll-snap-type",
+      "scroll-target-group",
+      "scroll-timeline",
+      "scroll-timeline-axis",
+      "scroll-timeline-name",
+      "scrollbar-color",
+      "scrollbar-gutter",
+      "scrollbar-width",
+      "text-align-last",
+      "text-autospace",
+      "text-box",
+      "text-box-edge",
+      "text-box-trim",
+      "text-combine-upright",
+      "text-decoration-color",
+      "text-decoration-line",
+      "text-decoration-skip-ink",
+      "text-decoration-style",
+      "text-decoration-thickness",
+      "text-fit",
+      "text-justify",
+      "text-orientation",
+      "text-size-adjust",
+      "text-spacing-trim",
+      "text-underline-offset",
+      "text-underline-position",
+      "text-wrap",
+      "text-wrap-mode",
+      "text-wrap-style",
+      "timeline-scope",
+      "timeline-trigger",
+      "timeline-trigger-activation-range",
+      "timeline-trigger-activation-range-end",
+      "timeline-trigger-activation-range-start",
+      "timeline-trigger-active-range",
+      "timeline-trigger-active-range-end",
+      "timeline-trigger-active-range-start",
+      "timeline-trigger-name",
+      "timeline-trigger-source",
+      "transition-behavior",
+      "translate",
+      "trigger-scope",
+      "user-select",
+      "view-timeline",
+      "view-timeline-axis",
+      "view-timeline-inset",
+      "view-timeline-name",
+      "view-transition-class",
+      "view-transition-name",
+      "view-transition-scope",
+      "white-space-collapse",
+      "window-drag"
+    ]
+  },
+  "keywords": {
+    "-webkit-line-clamp": [
+      "none"
+    ],
+    "*": [
+      "revert-layer"
+    ],
+    "align-self": [
+      "anchor-center"
+    ],
+    "all": [
+      "revert-layer"
+    ],
+    "animation-duration": [
+      "auto"
+    ],
+    "background-clip": [
+      "border-area",
+      "text"
+    ],
+    "clear": [
+      "inline-end",
+      "inline-start"
+    ],
+    "clip-path": [
+      "border-box",
+      "content-box",
+      "fill-box",
+      "margin-box",
+      "padding-box",
+      "stroke-box",
+      "view-box"
+    ],
+    "color": [
+      "canvas",
+      "canvastext"
+    ],
+    "display": [
+      "flow",
+      "flow-root",
+      "ruby",
+      "ruby-text"
+    ],
+    "fill": [
+      "context-fill",
+      "context-stroke"
+    ],
+    "flex": [
+      "content",
+      "fit-content",
+      "max-content",
+      "min-content"
+    ],
+    "flex-basis": [
+      "content",
+      "fit-content",
+      "max-content",
+      "min-content"
+    ],
+    "flex-flow": [
+      "balance"
+    ],
+    "flex-wrap": [
+      "balance"
+    ],
+    "float": [
+      "inline-end",
+      "inline-start"
+    ],
+    "font": [
+      "caption",
+      "icon",
+      "menu",
+      "message-box",
+      "small-caption",
+      "status-bar"
+    ],
+    "font-size": [
+      "math",
+      "xxx-large"
+    ],
+    "grid-template-columns": [
+      "subgrid"
+    ],
+    "grid-template-rows": [
+      "subgrid"
+    ],
+    "justify-items": [
+      "legacy"
+    ],
+    "justify-self": [
+      "anchor-center"
+    ],
+    "line-break": [
+      "anywhere"
+    ],
+    "mask": [
+      "add",
+      "alpha",
+      "bottom",
+      "center",
+      "exclude",
+      "fill-box",
+      "intersect",
+      "left",
+      "luminance",
+      "match-source",
+      "no-clip",
+      "no-repeat",
+      "repeat",
+      "repeat-x",
+      "repeat-y",
+      "right",
+      "space",
+      "stroke-box",
+      "subtract",
+      "top",
+      "view-box"
+    ],
+    "overflow": [
+      "clip"
+    ],
+    "overflow-wrap": [
+      "anywhere"
+    ],
+    "overflow-x": [
+      "clip"
+    ],
+    "overflow-y": [
+      "clip"
+    ],
+    "place-self": [
+      "anchor-center"
+    ],
+    "position": [
+      "sticky"
+    ],
+    "quotes": [
+      "auto"
+    ],
+    "resize": [
+      "block",
+      "inline"
+    ],
+    "rx": [
+      "auto"
+    ],
+    "ry": [
+      "auto"
+    ],
+    "stroke": [
+      "context-fill",
+      "context-stroke"
+    ],
+    "text-decoration": [
+      "auto",
+      "dashed",
+      "dotted",
+      "double",
+      "from-font",
+      "grammar-error",
+      "solid",
+      "spelling-error",
+      "transparent",
+      "wavy"
+    ],
+    "text-transform": [
+      "math-auto"
+    ],
+    "touch-action": [
+      "none",
+      "pan-down",
+      "pan-left",
+      "pan-right",
+      "pan-up",
+      "pan-x",
+      "pan-y",
+      "pinch-zoom"
+    ],
+    "transform-box": [
+      "content-box",
+      "stroke-box"
+    ],
+    "transition-behavior": [
+      "allow-discrete"
+    ],
+    "white-space": [
+      "break-spaces",
+      "collapse",
+      "preserve",
+      "preserve-breaks",
+      "wrap"
+    ],
+    "width": [
+      "stretch"
+    ],
+    "word-break": [
+      "auto-phrase"
+    ],
+    "writing-mode": [
+      "sideways-lr",
+      "sideways-rl"
+    ]
+  },
+  "functions": {
+    "-webkit-calc": {
+      "kept": [
+        "width"
+      ],
+      "dropped": []
+    },
+    "-webkit-cross-fade": {
+      "kept": [
+        "background-image"
+      ],
+      "dropped": []
+    },
+    "-webkit-gradient": {
+      "kept": [
+        "background-image"
+      ],
+      "dropped": []
+    },
+    "-webkit-image-set": {
+      "kept": [
+        "background-image"
+      ],
+      "dropped": []
+    },
+    "-webkit-linear-gradient": {
+      "kept": [
+        "background-image"
+      ],
+      "dropped": []
+    },
+    "abs": {
+      "kept": [],
+      "dropped": [
+        "width"
+      ]
+    },
+    "acos": {
+      "kept": [],
+      "dropped": [
+        "transform"
+      ]
+    },
+    "alpha": {
+      "kept": [],
+      "dropped": [
+        "color"
+      ]
+    },
+    "anchor": {
+      "kept": [],
+      "dropped": [
+        "top"
+      ]
+    },
+    "anchor-size": {
+      "kept": [],
+      "dropped": [
+        "width"
+      ]
+    },
+    "asin": {
+      "kept": [],
+      "dropped": [
+        "transform"
+      ]
+    },
+    "atan": {
+      "kept": [],
+      "dropped": [
+        "transform"
+      ]
+    },
+    "atan2": {
+      "kept": [],
+      "dropped": [
+        "transform"
+      ]
+    },
+    "attr": {
+      "kept": [
+        "content"
+      ],
+      "dropped": []
+    },
+    "blur": {
+      "kept": [
+        "filter"
+      ],
+      "dropped": []
+    },
+    "brightness": {
+      "kept": [
+        "filter"
+      ],
+      "dropped": []
+    },
+    "calc": {
+      "kept": [
+        "width"
+      ],
+      "dropped": []
+    },
+    "calc-size": {
+      "kept": [],
+      "dropped": [
+        "height"
+      ]
+    },
+    "circle": {
+      "kept": [
+        "-webkit-clip-path",
+        "shape-outside"
+      ],
+      "dropped": [
+        "clip-path"
+      ]
+    },
+    "clamp": {
+      "kept": [],
+      "dropped": [
+        "width"
+      ]
+    },
+    "color": {
+      "kept": [
+        "color"
+      ],
+      "dropped": []
+    },
+    "color-mix": {
+      "kept": [],
+      "dropped": [
+        "color"
+      ]
+    },
+    "conic-gradient": {
+      "kept": [],
+      "dropped": [
+        "background-image"
+      ]
+    },
+    "contrast": {
+      "kept": [
+        "filter"
+      ],
+      "dropped": []
+    },
+    "cos": {
+      "kept": [],
+      "dropped": [
+        "width"
+      ]
+    },
+    "counter": {
+      "kept": [
+        "content"
+      ],
+      "dropped": []
+    },
+    "counters": {
+      "kept": [
+        "content"
+      ],
+      "dropped": []
+    },
+    "cubic-bezier": {
+      "kept": [
+        "transition-timing-function"
+      ],
+      "dropped": []
+    },
+    "drop-shadow": {
+      "kept": [
+        "filter"
+      ],
+      "dropped": []
+    },
+    "ellipse": {
+      "kept": [
+        "-webkit-clip-path"
+      ],
+      "dropped": [
+        "clip-path"
+      ]
+    },
+    "env": {
+      "kept": [],
+      "dropped": [
+        "width"
+      ]
+    },
+    "exp": {
+      "kept": [],
+      "dropped": [
+        "width"
+      ]
+    },
+    "fit-content": {
+      "kept": [
+        "grid-template-columns"
+      ],
+      "dropped": []
+    },
+    "from": {
+      "kept": [
+        "background-image"
+      ],
+      "dropped": []
+    },
+    "grayscale": {
+      "kept": [
+        "filter"
+      ],
+      "dropped": []
+    },
+    "hsl": {
+      "kept": [
+        "color"
+      ],
+      "dropped": []
+    },
+    "hsla": {
+      "kept": [
+        "color"
+      ],
+      "dropped": []
+    },
+    "hue-rotate": {
+      "kept": [
+        "filter"
+      ],
+      "dropped": []
+    },
+    "hwb": {
+      "kept": [],
+      "dropped": [
+        "color"
+      ]
+    },
+    "hypot": {
+      "kept": [],
+      "dropped": [
+        "width"
+      ]
+    },
+    "image": {
+      "kept": [],
+      "dropped": [
+        "background-image"
+      ]
+    },
+    "image-set": {
+      "kept": [],
+      "dropped": [
+        "background-image"
+      ]
+    },
+    "inset": {
+      "kept": [
+        "-webkit-clip-path"
+      ],
+      "dropped": [
+        "clip-path"
+      ]
+    },
+    "invert": {
+      "kept": [
+        "filter"
+      ],
+      "dropped": []
+    },
+    "lab": {
+      "kept": [],
+      "dropped": [
+        "color"
+      ]
+    },
+    "lch": {
+      "kept": [],
+      "dropped": [
+        "color"
+      ]
+    },
+    "light-dark": {
+      "kept": [],
+      "dropped": [
+        "color"
+      ]
+    },
+    "linear": {
+      "kept": [],
+      "dropped": [
+        "transition-timing-function"
+      ]
+    },
+    "linear-gradient": {
+      "kept": [
+        "background",
+        "background-image"
+      ],
+      "dropped": []
+    },
+    "log": {
+      "kept": [],
+      "dropped": [
+        "width"
+      ]
+    },
+    "matrix": {
+      "kept": [
+        "transform"
+      ],
+      "dropped": []
+    },
+    "matrix3d": {
+      "kept": [
+        "transform"
+      ],
+      "dropped": []
+    },
+    "max": {
+      "kept": [],
+      "dropped": [
+        "width"
+      ]
+    },
+    "min": {
+      "kept": [],
+      "dropped": [
+        "width"
+      ]
+    },
+    "minmax": {
+      "kept": [
+        "grid-template-columns"
+      ],
+      "dropped": []
+    },
+    "mod": {
+      "kept": [],
+      "dropped": [
+        "width"
+      ]
+    },
+    "oklab": {
+      "kept": [],
+      "dropped": [
+        "color"
+      ]
+    },
+    "oklch": {
+      "kept": [],
+      "dropped": [
+        "color"
+      ]
+    },
+    "opacity": {
+      "kept": [
+        "filter"
+      ],
+      "dropped": []
+    },
+    "paint": {
+      "kept": [],
+      "dropped": [
+        "background-image"
+      ]
+    },
+    "path": {
+      "kept": [],
+      "dropped": [
+        "clip-path"
+      ]
+    },
+    "perspective": {
+      "kept": [
+        "transform"
+      ],
+      "dropped": []
+    },
+    "polygon": {
+      "kept": [
+        "-webkit-clip-path"
+      ],
+      "dropped": [
+        "clip-path"
+      ]
+    },
+    "pow": {
+      "kept": [],
+      "dropped": [
+        "width"
+      ]
+    },
+    "radial-gradient": {
+      "kept": [
+        "background-image"
+      ],
+      "dropped": []
+    },
+    "rect": {
+      "kept": [
+        "clip"
+      ],
+      "dropped": [
+        "clip-path"
+      ]
+    },
+    "rem": {
+      "kept": [],
+      "dropped": [
+        "width"
+      ]
+    },
+    "repeat": {
+      "kept": [
+        "grid-template-columns"
+      ],
+      "dropped": []
+    },
+    "repeating-conic-gradient": {
+      "kept": [],
+      "dropped": [
+        "background-image"
+      ]
+    },
+    "repeating-linear-gradient": {
+      "kept": [
+        "background-image"
+      ],
+      "dropped": []
+    },
+    "repeating-radial-gradient": {
+      "kept": [
+        "background-image"
+      ],
+      "dropped": []
+    },
+    "rgb": {
+      "kept": [
+        "color"
+      ],
+      "dropped": []
+    },
+    "rgba": {
+      "kept": [
+        "border",
+        "box-shadow",
+        "color"
+      ],
+      "dropped": []
+    },
+    "rotate": {
+      "kept": [
+        "transform"
+      ],
+      "dropped": []
+    },
+    "rotate3d": {
+      "kept": [
+        "transform"
+      ],
+      "dropped": []
+    },
+    "rotatex": {
+      "kept": [
+        "transform"
+      ],
+      "dropped": []
+    },
+    "rotatey": {
+      "kept": [
+        "transform"
+      ],
+      "dropped": []
+    },
+    "rotatez": {
+      "kept": [
+        "transform"
+      ],
+      "dropped": []
+    },
+    "round": {
+      "kept": [],
+      "dropped": [
+        "width"
+      ]
+    },
+    "saturate": {
+      "kept": [
+        "filter"
+      ],
+      "dropped": []
+    },
+    "scale": {
+      "kept": [
+        "transform"
+      ],
+      "dropped": []
+    },
+    "scale3d": {
+      "kept": [
+        "transform"
+      ],
+      "dropped": []
+    },
+    "scalex": {
+      "kept": [
+        "transform"
+      ],
+      "dropped": []
+    },
+    "scaley": {
+      "kept": [
+        "transform"
+      ],
+      "dropped": []
+    },
+    "scalez": {
+      "kept": [
+        "transform"
+      ],
+      "dropped": []
+    },
+    "sepia": {
+      "kept": [
+        "filter"
+      ],
+      "dropped": []
+    },
+    "sign": {
+      "kept": [],
+      "dropped": [
+        "width"
+      ]
+    },
+    "sin": {
+      "kept": [],
+      "dropped": [
+        "width"
+      ]
+    },
+    "skew": {
+      "kept": [
+        "transform"
+      ],
+      "dropped": []
+    },
+    "skewx": {
+      "kept": [
+        "transform"
+      ],
+      "dropped": []
+    },
+    "skewy": {
+      "kept": [
+        "transform"
+      ],
+      "dropped": []
+    },
+    "sqrt": {
+      "kept": [],
+      "dropped": [
+        "width"
+      ]
+    },
+    "steps": {
+      "kept": [
+        "transition-timing-function"
+      ],
+      "dropped": []
+    },
+    "tan": {
+      "kept": [],
+      "dropped": [
+        "width"
+      ]
+    },
+    "to": {
+      "kept": [
+        "background-image"
+      ],
+      "dropped": []
+    },
+    "translate": {
+      "kept": [
+        "transform"
+      ],
+      "dropped": []
+    },
+    "translate3d": {
+      "kept": [
+        "transform"
+      ],
+      "dropped": []
+    },
+    "translatex": {
+      "kept": [
+        "transform"
+      ],
+      "dropped": []
+    },
+    "translatey": {
+      "kept": [
+        "transform"
+      ],
+      "dropped": []
+    },
+    "translatez": {
+      "kept": [
+        "transform"
+      ],
+      "dropped": []
+    },
+    "var": {
+      "kept": [
+        "margin",
+        "width"
+      ],
+      "dropped": []
+    },
+    "xywh": {
+      "kept": [],
+      "dropped": [
+        "clip-path"
+      ]
+    }
+  },
+  "units": {
+    "kept": [
+      "%",
+      "ch",
+      "cm",
+      "deg",
+      "em",
+      "ex",
+      "fr",
+      "grad",
+      "in",
+      "mm",
+      "ms",
+      "pc",
+      "pt",
+      "px",
+      "rad",
+      "rem",
+      "s",
+      "turn",
+      "vh",
+      "vmax",
+      "vmin",
+      "vw",
+      "x"
+    ],
+    "dropped": [
+      "cap",
+      "cqb",
+      "cqh",
+      "cqi",
+      "cqmax",
+      "cqmin",
+      "cqw",
+      "dpcm",
+      "dpi",
+      "dppx",
+      "dvb",
+      "dvh",
+      "dvi",
+      "dvw",
+      "ic",
+      "lh",
+      "lvh",
+      "lvw",
+      "q",
+      "rcap",
+      "rch",
+      "rex",
+      "ric",
+      "rlh",
+      "svb",
+      "svh",
+      "svi",
+      "svw",
+      "vb",
+      "vi"
+    ]
+  },
+  "colors": {
+    "kept": [
+      "#rgb",
+      "#rgba",
+      "#rrggbb",
+      "#rrggbbaa",
+      "with commas"
+    ],
+    "dropped": [
+      "from another color",
+      "with a hue unit",
+      "with a slash",
+      "with an alpha as a percent",
+      "with spaces"
+    ]
+  },
+  "selectors": {
+    "kept": [
+      "+",
+      ":-webkit-any",
+      ":-webkit-autofill",
+      "::-webkit-input-placeholder",
+      "::-webkit-progress-bar",
+      "::-webkit-progress-inner-value",
+      "::-webkit-progress-value",
+      "::-webkit-slider-runnable-track",
+      "::-webkit-slider-thumb",
+      "::after",
+      "::before",
+      "::first-letter",
+      "::first-line",
+      "::placeholder",
+      "::selection",
+      "::slotted",
+      ":active",
+      ":any-link",
+      ":checked",
+      ":default",
+      ":defined",
+      ":dir",
+      ":disabled",
+      ":empty",
+      ":enabled",
+      ":first-child",
+      ":first-of-type",
+      ":focus",
+      ":focus-within",
+      ":host",
+      ":hover",
+      ":in-range",
+      ":indeterminate",
+      ":invalid",
+      ":lang",
+      ":last-child",
+      ":last-of-type",
+      ":link",
+      ":matches",
+      ":not",
+      ":nth-child",
+      ":nth-child(of)",
+      ":nth-last-child",
+      ":nth-last-of-type",
+      ":nth-of-type",
+      ":only-child",
+      ":only-of-type",
+      ":optional",
+      ":out-of-range",
+      ":placeholder-shown",
+      ":read-only",
+      ":read-write",
+      ":required",
+      ":root",
+      ":scope",
+      ":target",
+      ":valid",
+      ":visited",
+      ">",
+      "[i]",
+      "descendant",
+      "|",
+      "~"
+    ],
+    "dropped": [
+      "&",
+      "::backdrop",
+      "::checkmark",
+      "::cue",
+      "::details-content",
+      "::file-selector-button",
+      "::grammar-error",
+      "::highlight",
+      "::marker",
+      "::part",
+      "::picker",
+      "::picker-icon",
+      "::scroll-marker",
+      "::scroll-marker-group",
+      "::spelling-error",
+      "::target-text",
+      "::view-transition",
+      "::view-transition-group",
+      "::view-transition-image-pair",
+      "::view-transition-new",
+      "::view-transition-old",
+      ":active-view-transition",
+      ":active-view-transition-type",
+      ":autofill",
+      ":current",
+      ":focus-visible",
+      ":fullscreen",
+      ":future",
+      ":has",
+      ":host-context",
+      ":is",
+      ":modal",
+      ":open",
+      ":past",
+      ":picture-in-picture",
+      ":popover-open",
+      ":state",
+      ":target-current",
+      ":user-invalid",
+      ":user-valid",
+      ":where",
+      ":xr-overlay"
+    ]
+  },
+  "atRules": {
+    "kept": [
+      "@-webkit-keyframes",
+      "@font-face",
+      "@import",
+      "@keyframes",
+      "@media",
+      "@namespace",
+      "@page",
+      "@supports",
+      "@supports not"
+    ],
+    "dropped": [
+      "@container",
+      "@counter-style",
+      "@font-feature-values",
+      "@font-palette-values",
+      "@import layer()",
+      "@import supports()",
+      "@layer",
+      "@position-try",
+      "@property",
+      "@scope",
+      "@starting-style",
+      "@supports selector()",
+      "@view-transition",
+      "nesting"
+    ]
+  },
+  "media": {
+    "kept": [
+      "(-webkit-device-pixel-ratio)",
+      "(-webkit-min-device-pixel-ratio)",
+      "(any-hover)",
+      "(any-pointer)",
+      "(aspect-ratio)",
+      "(color)",
+      "(color-gamut)",
+      "(color-index)",
+      "(device-aspect-ratio)",
+      "(device-width)",
+      "(grid)",
+      "(height)",
+      "(hover)",
+      "(inverted-colors)",
+      "(max-width)",
+      "(min-aspect-ratio)",
+      "(min-color)",
+      "(min-height)",
+      "(min-width)",
+      "(monochrome)",
+      "(orientation)",
+      "(pointer)",
+      "(prefers-reduced-motion)",
+      "(width)",
+      "all",
+      "and",
+      "not",
+      "only",
+      "print",
+      "screen",
+      "speech"
+    ],
+    "dropped": [
+      "(display-mode)",
+      "(dynamic-range)",
+      "(forced-colors)",
+      "(overflow-block)",
+      "(overflow-inline)",
+      "(prefers-color-scheme)",
+      "(prefers-contrast)",
+      "(prefers-reduced-data)",
+      "(prefers-reduced-transparency)",
+      "(resolution)",
+      "(scan)",
+      "(scripting)",
+      "(update)",
+      "(video-dynamic-range)",
+      "a function in a feature",
+      "not inside a condition",
+      "or",
+      "range syntax"
+    ]
+  }
+}
