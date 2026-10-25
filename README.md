@@ -109,6 +109,8 @@ A sim update can change any of this.
 - CSS written in markup, such as a `style` attribute or a `<style>` element in an HTML file, isn't checked; only `.css` files are.
 - A keyword p14 never tried passes, since p14 tried at most 40 per property and none for the engine's own properties, such as `-webkit-box-orient`.
 - p14 tried each keyword as a property's whole value, so a value of two, such as `display: inline flex`, passes on each keyword alone.
+- A font face's descriptors aren't checked, so a WOFF2 `src` passes, though p19 saw Geist's WOFF2 draw from no path in an EFB app, where its TTF drew from every one.
+- `place-content: end` and the boolean `(hover)` pass, though they likely share `justify-content: end`'s and `(hover: hover)`'s fate; no probe has tried either.
 - A custom property holding a color's channels passes whatever their form, so `--c: 79 211 234` read as `rgba(var(--c), 0.8)` passes and draws nothing; write the channels with commas, `--c: 79, 211, 234`.
 - Kept means the engine holds a declaration.
   Where p13 or p14 laid one out, the engine placed boxes where Chromium did, but for a table cell given a width, which took the table's whole width, and which the check passes.
